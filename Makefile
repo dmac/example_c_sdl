@@ -11,7 +11,7 @@ LDFLAGS := -F lib -framework SDL2
 
 $(BIN): $(OBJ)
 	$(CC) -o $@ $^ $(LDFLAGS)
-	install_name_tool -add_rpath lib $@
+	install_name_tool -add_rpath "@loader_path/../lib" $@
 
 $(BUILD)/%.o: %.c | $(BUILD)
 	$(CC) -c -o $@ $< $(CFLAGS)
