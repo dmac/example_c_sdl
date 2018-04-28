@@ -13,8 +13,8 @@ int main(void) {
         "Example",
         SDL_WINDOWPOS_CENTERED,
         SDL_WINDOWPOS_CENTERED,
-        750,
-        1334,
+        800,
+        600,
         SDL_WINDOW_OPENGL | SDL_WINDOW_INPUT_FOCUS);
     if (window == NULL) {
         printf("SDL_CreateWindow: %s", SDL_GetError());
